@@ -3,6 +3,7 @@
  * @Date: 2024-08-04 10:32:01
 -->
 ## Extended Kalman Filter Demo
+**The math formula in Github is not supported well, you had better clone this repository.**
 
 This is a repository for `Extended Kalman Filter`. If you want to know more about `Extended Kalman Filte`, you can read a book named `Probabilistic Robotics`. Thanks to [this course](http://ais.informatik.uni-freiburg.de/teaching/ws13/mapping/index_en.php) which provides a framework.
 
