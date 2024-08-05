@@ -74,6 +74,7 @@ Note that in this repository, $x_t = [x, y, \theta, m_{1,x}, m_{1,y}, ..., m_{n,
 We need speicify the $\mu_0$ and $\Sigma_0$. For $o_0$, we just think the robot is at the origin point of the coordinate, which means that $o_0=[0, 0, 0]^T$. For the covariance of $o_0$, since we know the original pose exactly, the error is 0. Therefore, the covariance is $\mathbf{0}_{3\times3}$. For landmarks, we know nothing about it. Therefore, $m_{t-1}$ can be assigned $\mathbf{0}_{2n\times 1}$, and the covariance is $\mathbf{I}_{2n \times 2n} \times inf$, where $\mathbf{I}$ is the indentity matrix and $inf$ is a large enough number.
 
 We combine them together
+
 $$
 \mu_0 = \mathbf{0}_{(2n+3) \times 1}
 $$
@@ -113,6 +114,7 @@ y_{t-1} + \delta_{trans}sin(\theta + \delta_{rot1}) \\
 $$
 
 It means that
+
 $$
 \begin{aligned}
 g(u_t, o_{t-1}) & = g(\delta_{rot1}, \delta_{trans}, \delta_{rot2},x_{t-1}, y_{t-1}, \theta_{t-1}) \\
@@ -237,7 +239,7 @@ $$
 \end{array}\right)
 $$
 
-Note that in this equation, some $\bar{x}_t$s represent the x-axis coordinate, some represent the whole vector.
+Note that in this equation, some $\bar{x}_t$ represent the x-axis coordinate, some represent the whole vector.
 
 We further simplify this equation. 
 
