@@ -171,7 +171,7 @@ $$
 G_t = 
 \frac{\partial{g(u_t, o_{t-1}) }}{\partial{o_{t-1}}} =
 \left(\begin{array}{cc}
-\frac{\partial{g(u_t, o_{t-1}) }}{\partial{o_{t-1}}} & \mathbf{0}_{3\times 2n}  \\
+\frac{\partial{g(u_t, o_{t-1}) }}{\partial{o_{t-1}}} & \mathbf{0}_{3\times 2n}\\
 \mathbf{0}_{2n \times 3} & \mathbf{I}_{2n \times 2n} & \\
 \end{array}\right)
 $$
@@ -261,10 +261,12 @@ $$
 
 By the way, you may need this equation: 
 $$
-\frac{\partial{arctan2(y, x)}}{\partial{x}}= \frac{-y}{x^2+y^2} \\
-\frac{\partial{arctan2(y, x)}}{\partial{y}}= \frac{x}{x^2+y^2}
+\frac{\partial{arctan2(y, x)}}{\partial{x}}= \frac{-y}{x^2+y^2} 
 $$
 
+$$
+\frac{\partial{arctan2(y, x)}}{\partial{y}}= \frac{x}{x^2+y^2}
+$$
 
 Now, back to the first issue, not all the landmarks can be observed at one timestamp. Therefore, if the robot find a landmark which has not been seen before, we use the measurement to set up the coordinate of the landmark. Then, we need to map ${}^{low}H_t^i =\frac{\partial{z_t^i}}{\partial{\bar{x}_t}}$ to a high-dimension space, because we need to add $\frac{\partial{z_t^i}}{\partial{m_t^{1,x}}}, \frac{\partial{z_t^i}}{\partial{m_t^{1,y}}}, ..., \frac{\partial{z_t^i}}{\partial{m_t^{n,x}}}, \frac{\partial{z_t^i}}{\partial{m_t^{n,y}}}$. Actually, these partial derivatives are zero, and we can use a mapping matrix 
 <center>
